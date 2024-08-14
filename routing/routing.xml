@@ -1513,7 +1513,7 @@
 			<select value="0.1" t="barrier" v="debris"/>
 			<!--MFRI2040813 Force routing to use cycling path marked ways-->
 			<if param="driving_style_prefer_cycling_routes">
-				<select value="1.6" t="route_bicycle" v=""/>
+				<select value="3.3" t="route_bicycle" v=""/>
 			</if>
 
 			<if param="avoid_unpaved">
