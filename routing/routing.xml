@@ -1153,7 +1153,7 @@
 		</point>
 	</routingProfile>
 
-	<routingProfile name="bicycle" baseProfile="bicycle" restrictionsAware="true" minSpeed="5" defaultSpeed="10" maxSpeed="40" sharpTurn="6" slightTurn="6" followSpeedLimitations="false" onewayAware="true" heuristicCoefficient="1.4">
+	<routingProfile name="bicycle" baseProfile="bicycle" restrictionsAware="true" minSpeed="5" defaultSpeed="20" maxSpeed="40" sharpTurn="6" slightTurn="6" followSpeedLimitations="false" onewayAware="true" heuristicCoefficient="1.4">
 		<attribute name="penaltyForReverseDirection" value="60" /> <!-- bike: ~ 1 minute to turn back -->
 
 		<!-- <attribute name="relaxNodesIfStartDistSmallCoeff" value="2.5"/>  -->
@@ -1183,7 +1183,7 @@
 		<parameter id="avoid_sett" name="Avoid sett" description="Streets and paths which are paved with sett are avoided quite strictly (they are already avoided in standard mode)." type="boolean" default="false"/>
 		<parameter id="avoid_cobblestone" name="Avoid cobblestone" description="Streets and paths which are paved with cobblestone are avoided quite strictly (they are already avoided in standard mode)." type="boolean" default="false"/>
 		<parameter id="height_obstacles" name="Use elevation data" description="Use terrain elevation data provided by SRTM, ASTER and EU-DEM" type="boolean" default="false"/>
-		<parameter id="driving_style_prefer_cycling_routes" name="Prefer cycling routes(MFRI)" description="Prefer cycling routes: Routing engine will attach higher priority" type="boolean"/> <!--MFRI20240813-->
+		<parameter id="driving_style_prefer_cycling_routes" name="Prefer cycling routes(MFRI)" description="Prefer cycling routes: Routing engine will attach higher priority" type="boolean" default="true"/> <!--MFRI20240813-->
 
 		<way attribute="access">
 			<select value="-1" t="osmand_change" v="delete"/>
@@ -1515,7 +1515,7 @@
 			<select value="0.1" t="barrier" v="debris"/>
 			<!--MFRI2040813 Force routing to use cycling path marked ways-->
 			<if param="driving_style_prefer_cycling_routes">
-				<select value="1.8" t="route_bicycle" v=""/>
+				<select value="3.5" t="route_bicycle" v=""/>
 			</if>
 
 			<if param="avoid_unpaved">
