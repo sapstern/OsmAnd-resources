@@ -267,6 +267,7 @@ icon_alias health_post health_health_post
 icon_alias avalanche_transceiver emergency_avalanche_transceiver
 icon_alias avalanche_transceiver_training emergency_avalanche_transceiver_training
 icon_alias siren emergency_siren
+icon_alias disaster_response emergency_disaster_response
 
 icon_alias healthcare health_healthcare
 icon_alias amenity_dentist health_dentist
@@ -1213,6 +1214,7 @@ icon_alias communication amenity_telephone
 icon_alias trash_disposal amenity_colored_waste_disposal
 icon_alias bridge poi_colored_bridge
 icon_alias tunnel poi_colored_tunnel
+icon_alias osmand_tunnel poi_osmand_tunnel
 icon_alias amenity_hunting_stand poi_colored_hunting_stand
 icon_alias highway_street_lamp functional-icons_street_lamp
 icon_alias highway_street_lamp_lit functional-icons_street_lamp_lit
