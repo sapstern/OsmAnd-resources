@@ -2277,7 +2277,6 @@
 					</poi_additional_category>
 					<poi_additional_category name="covered" icon="covered_yes">
 						<poi_additional name="covered_yes" tag="covered" value="yes"/>
-						<poi_additional name="covered_booth" tag="covered" value="booth"/>
 					</poi_additional_category>
 					<poi_additional_category name="shelter_filter" icon="amenity_shelter">
 						<poi_additional name="shelter_yes" tag="shelter" value="yes"/>
@@ -4772,6 +4771,9 @@
 				<poi_additional_category name="video_telephone">
 					<poi_additional name="video_yes" tag="video" value="yes"/>
 					<poi_additional name="video_no" tag="video" value="no"/>
+				</poi_additional_category>
+				<poi_additional_category name="covered_booth_filter">
+					<poi_additional name="covered_booth" tag="covered" value="booth"/>
 				</poi_additional_category>
 				<poi_additional name="booth" tag="booth" type="text"/>
 			</poi_type>
