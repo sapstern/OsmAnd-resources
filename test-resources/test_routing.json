@@ -1647,5 +1647,25 @@
       "661016568": true,
       "180298830": false
     }
+  },
+  {
+    "testName": "88. Strange detour around roundabout https://github.com/osmandapp/OsmAnd/issues/24626",
+    "url": "https://test.osmand.net/map/navigate/?start=43.129577,5.981997&end=43.128273,5.981761&profile=car#18/43.12865/5.98487",
+    "params": {
+      "map": "Routing_test_88_double_roundaround_cost.obf",
+      "vehicle": "car"
+    },
+    "startPoint": {
+      "latitude": 43.129577,
+      "longitude": 5.981997
+    },
+    "endPoint": {
+      "latitude": 43.128273,
+      "longitude": 5.981761
+    },
+    "expectedResults": {
+      "377898647": true,
+      "225795024": false
+    }
   }
 ]
