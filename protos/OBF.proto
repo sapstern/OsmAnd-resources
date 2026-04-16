@@ -209,7 +209,9 @@ message OsmAndAddressNameIndexData {
 	required IndexedStringTable table = 4;
 
 	repeated AddressNameIndexData atom = 7;
-		message AddressNameIndexData {
+	message AddressNameIndexData {
+			// suffixes could be terminal or not - non-terminal starts with \u00..
+			repeated string suffixesDictionary = 2; // suffixes releated to 1 prefix
 			// shift is measured from start (before length)
 			repeated AddressNameIndexDataAtom atom = 4;
 	}
@@ -222,6 +224,8 @@ message AddressNameIndexDataAtom {
 	 optional string nameEn = 2;
 	 // 1 - city, 2 - postcode, 3 - village,  4 - street
 	 required uint32 type = 3; 
+	 
+	 repeated uint32 suffixesBitset = 4; // bits are ordered as suffixesDictionary
 
 	 // start mixed 
 	 // shift from start AddressNameIndexData (!) to ...Index
