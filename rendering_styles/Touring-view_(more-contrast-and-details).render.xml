@@ -1227,7 +1227,27 @@
 							<case minzoom="13" strokeWidth_5="1"/>
 						</apply>
 						<apply_if nightMode="true" color_5="$pathColorNight"/>
+						
+						<!-- Bicycle-designated paths (Issue #24915) -->
+						<!-- (1) Path has no designation -> black (already achieved above) -->
+						
+						<!-- (2) Bicycle profile + bicycle=designated -> blue (with emphasis) -->
 						<apply_if baseAppMode="bicycle" additional="bicycle=designated" minzoom="12" color_5="$cyclewayColor" strokeWidth_5="2" pathEffect_5="8_4"/>
+
+						<!-- (3) Non-bicycle profile + bicycle=designated -> blue (no emphasis) -->
+						<apply_if baseAppMode="pedestrian" additional="bicycle=designated" minzoom="12" maxzoom="12" color_5="$cyclewayColor" strokeWidth_5="0.7"/>
+						<apply_if baseAppMode="pedestrian" additional="bicycle=designated" minzoom="13" color_5="$cyclewayColor" strokeWidth_5="1"/>
+						<apply_if baseAppMode="default" additional="bicycle=designated" minzoom="12" color_5="$cyclewayColor"/>
+
+						<!-- (4) Non-bicycle profile + foot=designated -> black (override even if bicycle=designated) -->
+						<apply_if baseAppMode="pedestrian" additional="foot=designated" minzoom="12">
+							<case nightMode="true" color_5="$pathColorNight"/>
+							<case color_5="$pathColor"/>
+						</apply_if>
+						<apply_if baseAppMode="default" additional="foot=designated" minzoom="12">
+							<case nightMode="true" color_5="$pathColorNight"/>
+							<case color_5="$pathColor"/>
+						</apply_if>
 					</apply_if>
 
 					<apply_if alpineHiking="true" color="$null">
