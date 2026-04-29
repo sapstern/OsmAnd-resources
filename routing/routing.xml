@@ -405,7 +405,7 @@
 		<!-- Turn penalties for short_way=yes -->
 		<attribute name="shortWaySharpTurn" value = "10"/>
 		<attribute name="shortWaySlightTurn" value = "5"/>
-		<attribute name="shortWayRoundAboutTurn" value = "5"/>
+		<attribute name="shortWayRoundaboutTurn" value = "5"/>
 
 		<!-- NEW ROUTING API -->
 		<!-- <parameter id="prefer_motorway" name="Prefer motorways" description="Prefer motorways" type="boolean"/> -->
